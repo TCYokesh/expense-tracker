@@ -1,6 +1,6 @@
 function Header(){
     return(
-        <div>
+        <div className="header">
             <nav>
                 <span className='bar'></span>
                 <span className='bar'></span>

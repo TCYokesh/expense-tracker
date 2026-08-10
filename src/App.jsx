@@ -102,24 +102,26 @@ function App(){
                 setError={setError}
                 deletehandler={deletehandler}
                 editExpense={editExpense}
+                error={error}
             />
-            <FilterExpense
-                categories={categories}
-                setCategories={setCategories}
-            />
-            <SearchExpense
-                search={search}
-                setSearch={setSearch}
-            />
-            <SortExpense
-                sort={sort}
-                setSort={setSort}
-            />
+            <div className='filter-section'>
+                <FilterExpense
+                    categories={categories}
+                    setCategories={setCategories}
+                />
+                <SearchExpense
+                    search={search}
+                    setSearch={setSearch}
+                />
+                <SortExpense
+                    sort={sort}
+                    setSort={setSort}
+                />
+            </div>
             <ExpenseList
                 filteredExpense={finalExpense}
                 deletehandler={deletehandler}
                 editExpense={editExpense}
-                error={error}
                 totalExpense={totalExpense}
                 totalExpenses={totalExpenses}
                 sortedExpense={sortedExpense}

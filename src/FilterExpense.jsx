@@ -1,6 +1,6 @@
 function FilterExpense(props){
     return(
-        <select value={props.categories} onChange={(e)=>props.setCategories(e.target.value)}>
+        <select className="ftr-exp" value={props.categories} onChange={(e)=>props.setCategories(e.target.value)}>
             <option>All</option>
             <option>Rent</option>
             <option>Groceries</option>
