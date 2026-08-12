@@ -479,8 +479,8 @@ body{
         left: 0;
     }
     .input-field {
-        width: 1100px;
-        max-width: 100%;
+        width: calc(100% - 24px);
+        max-width: none;
         margin: 12px auto;
         padding: 14px;
         box-sizing: border-box;
