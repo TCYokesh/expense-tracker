@@ -12,15 +12,124 @@ body{
     overflow: hidden;
 }
 
-.header{
+.header {
     height: 60px;
     width: 100%;
-    background: linear-gradient(90deg, rgb(142, 115, 253), rgb(12, 12, 160));
+    background-color: #4f46e5;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu {
+    width: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu:hover .bar {
+    background-color: #dbeafe;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: #111827;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #a5b4fc;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.nav-links a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background-color: #374151;
+    color: #a5b4fc;
+    padding-left: 32px;
+}
+
+.copyright {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+
+    border-top: 1px solid #374151;
+}
+
+.copyright a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.copyright a:hover {
+    color: white;
 }
 
 .header h1{
@@ -29,21 +138,10 @@ body{
     right: 26px;
 }
 
-nav{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    left: 30px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.header .bar{
-    display: block;
-    height: 4px;
-    width: 28px;
-    background-color: white;
-    border-radius: 5px;
+.form-error{
+    color: red;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 .input-field{
@@ -102,8 +200,7 @@ nav{
     height: 48px;
     width: 100%;
     border: none;
-     background: linear-gradient(90deg, rgb(142, 115, 253), rgb(12, 12, 160));
-    /* background-color: rgb(71, 27, 248); */
+    background: linear-gradient(90deg, rgb(142, 115, 253), rgb(12, 12, 160));
     color: white;
     font-size: 18px;
     font-weight: bolder;
@@ -113,7 +210,6 @@ nav{
 .btn:hover{
     background: linear-gradient(90deg, rgb(12, 12, 160),rgb(142, 115, 253));
     transition: 1.0s step-end;
-
 }
 
 .filter-section{
@@ -229,9 +325,9 @@ nav{
     width: 95%;
     max-width: 1100px;
     min-height: 40px;
-    max-height: 220px;
+    max-height: 250px;
     margin: 12px auto 0;
-    padding: 5px;
+    padding: 0;
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
@@ -262,7 +358,7 @@ nav{
     border-radius: 9px;
     background-color: white;
     display: grid;
-    grid-template-columns: 170px 170px 170px 200px auto auto;
+    grid-template-columns: 1fr 170px 170px 200px auto auto;
     align-items: center;
     column-gap: 16px;
 }
@@ -334,12 +430,18 @@ nav{
 .delete-btn:hover {
     background-color: #fff0f0;
 }
-label {
+.exp-label {
     display: block;
+
     width: 100%;
-    text-align: left;
+    height: 60px;
+    margin-top: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
     font-size: 20px;
     font-weight: bolder;
-    padding: 10px;
-    box-sizing: border-box;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }

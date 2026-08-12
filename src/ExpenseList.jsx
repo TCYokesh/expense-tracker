@@ -14,7 +14,7 @@ function ExpenseList(props){
                         return(
                             <div key={expense.id} className="list">
                                 <span>{expense.name}</span>
-                                <span> {expense.amount}</span>
+                                <span> ₹{expense.amount}</span>
                                 <span> {expense.category}</span>
                                 <span> {expense.date}</span>
                                 <button className="edit-btn" onClick={()=>props.editExpense(expense.id)}> <img className='edit-icon' src={EditIcon} alt="Edit"/> Edit </button>
