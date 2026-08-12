@@ -664,7 +664,6 @@ body{
 
     .expense-items {
         width: 92%;
-
         height: 350px;
         max-height: 350px;
 
@@ -678,153 +677,15 @@ body{
 
         display: flex;
         flex-direction: column;
-        align-items: stretch;
 
+        /* Important */
+        align-items: stretch;
         flex-shrink: 0;
     }
 
-    .expense-items::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    .expense-items::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-
-    .expense-items::-webkit-scrollbar-thumb {
-        background: #c9c7df;
-        border-radius: 10px;
-    }
-
-    .expense-items::-webkit-scrollbar-thumb:hover {
-        background: #aaa6ce;
-    }
-    /* =========================
-       MAIN SECTIONS
-       ========================= */
-
-    .input-field,
-    .filter-section,
-    .exp-summary,
-    .exp-list {
-        width: 92%;
-    }
-
-
-    /* =========================
-       INPUT SECTION
-       ========================= */
-
-    .input-field {
-        padding: 16px;
-        margin-top: 18px;
-        border-radius: 12px;
-        box-sizing: border-box;
-    }
-
-    .input-field form {
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    .input,
-    .category {
-        width: 100%;
-        height: 46px;
-        box-sizing: border-box;
-        border-radius: 8px !important;
-        font-size: 14px;
-    }
-
-    .input-field .input:first-child {
-        width: 100%;
-    }
-
-    .input-field input[type="date"] {
-        width: 100%;
-    }
-
-    .input-field .category {
-        width: 100%;
-    }
-
-
-    /* =========================
-       ADD BUTTON
-       ========================= */
-
-    .add-btn {
-        width: 100%;
-        margin-top: 1px;
-    }
-
-    .add-btn .btn {
-        width: 100%;
-        height: 45px;
-        font-size: 15px;
-        border-radius: 8px;
-    }
-
-
-    /* =========================
-       FILTER SECTION
-       ========================= */
-
-    .filter-section {
-        width: 92%;
-        height: auto;
-        min-height: 70px;
-
-        padding: 10px;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        gap: 8px;
-
-        box-sizing: border-box;
-    }
-
-    .ftr-exp,
-    .srt-exp {
-        width: calc(50% - 4px);
-        height: 42px;
-        box-sizing: border-box;
-        font-size: 13px;
-    }
-
-    .srh-exp {
-        width: 100%;
-        height: 42px;
-        box-sizing: border-box;
-        font-size: 13px;
-    }
-
-
-    /* =========================
-       EXPENSE ITEMS CONTAINER
-       ========================= */
-
-    .expense-items {
-        width: 92%;
-        max-height: 400px;
-
-        margin-top: 8px;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-
-    /* =========================
-       EXPENSE CARD
-       ========================= */
-
     .list {
         width: 100%;
-        min-height: 0;
+        min-height: 115px;
 
         margin: 7px 0;
         padding: 13px 12px;
@@ -833,26 +694,8 @@ body{
 
         display: grid;
 
-        /*
-           Row 1:
-           Expense name
-
-           Row 2:
-           Amount | Category | Date
-
-           Row 3:
-           Edit | Delete
-        */
-
-        grid-template-columns:
-            1fr
-            1fr
-            1fr;
-
-        grid-template-rows:
-            auto
-            auto
-            auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
 
         column-gap: 8px;
         row-gap: 10px;
@@ -865,14 +708,12 @@ body{
         background-color: white;
 
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+
+        /* Very important */
+        flex-shrink: 0;
     }
 
-
-    /* =========================
-       LINE 1
-       EXPENSE NAME
-       ========================= */
-
+    /* Expense name */
     .list span:nth-child(1) {
         grid-column: 1 / 4;
         grid-row: 1;
@@ -881,7 +722,6 @@ body{
 
         font-size: 16px;
         font-weight: 700;
-
         color: #111936;
 
         overflow: hidden;
@@ -889,34 +729,21 @@ body{
         white-space: nowrap;
     }
 
-
-    /* =========================
-       LINE 2
-       AMOUNT
-       ========================= */
-
+    /* Amount */
     .list span:nth-child(2) {
         grid-column: 1;
         grid-row: 2;
-
-        width: 100%;
 
         text-align: center;
 
         font-size: 12px;
         font-weight: 600;
-
         color: #222633;
 
         white-space: nowrap;
     }
 
-
-    /* =========================
-       LINE 2
-       CATEGORY
-       ========================= */
-
+    /* Category */
     .list span:nth-child(3) {
         grid-column: 2;
         grid-row: 2;
@@ -943,33 +770,20 @@ body{
         text-overflow: ellipsis;
     }
 
-
-    /* =========================
-       LINE 2
-       DATE
-       ========================= */
-
+    /* Date */
     .list span:nth-child(4) {
         grid-column: 3;
         grid-row: 2;
 
-        width: 100%;
-
         text-align: center;
 
         font-size: 11px;
-
         color: #72798a;
 
         white-space: nowrap;
     }
 
-
-    /* =========================
-       LINE 3
-       EDIT BUTTON
-       ========================= */
-
+    /* Edit */
     .edit-btn {
         grid-column: 1;
         grid-row: 3;
@@ -982,7 +796,7 @@ body{
         padding: 0;
 
         border: 1px solid #9bbcff;
-        border-radius: 6px;
+        border-radius: 7px;
 
         background-color: white;
         color: #1761d1;
@@ -991,26 +805,10 @@ body{
         font-weight: 600;
 
         cursor: pointer;
-
         white-space: nowrap;
-
-        transition:
-            background-color 0.2s ease,
-            border-color 0.2s ease;
     }
 
-
-    .edit-btn:hover {
-        background-color: #f3f7ff;
-        border-color: #76a8ff;
-    }
-
-
-    /* =========================
-       LINE 3
-       DELETE BUTTON
-       ========================= */
-
+    /* Delete */
     .delete-btn {
         grid-column: 3;
         grid-row: 3;
@@ -1023,7 +821,7 @@ body{
         padding: 0;
 
         border: 1px solid #ffaaaa;
-        border-radius: 6px;
+        border-radius: 7px;
 
         background-color: white;
         color: #ed2727;
@@ -1032,25 +830,10 @@ body{
         font-weight: 600;
 
         cursor: pointer;
-
         white-space: nowrap;
-
-        transition:
-            background-color 0.2s ease,
-            border-color 0.2s ease;
     }
 
-
-    .delete-btn:hover {
-        background-color: #fff5f5;
-        border-color: #ff8585;
-    }
-
-
-    /* =========================
-       BUTTON ICONS
-       ========================= */
-
+    /* Icons */
     .edit-icon,
     .delete-icon {
         width: 12px;
@@ -1062,27 +845,14 @@ body{
         margin-right: 4px;
     }
 
-
-    /* =========================
-       EXPENSE LIST TITLE
-       ========================= */
-
-    .exp-label {
-        height: 50px;
-        font-size: 17px;
-    }
-
-
-    /* =========================
-       SCROLLBAR
-       ========================= */
-
+    /* Scrollbar */
     .expense-items::-webkit-scrollbar {
-        width: 5px;
+        width: 6px;
     }
 
     .expense-items::-webkit-scrollbar-track {
-        background: transparent;
+        background: #f1f1f1;
+        border-radius: 10px;
     }
 
     .expense-items::-webkit-scrollbar-thumb {
