@@ -439,11 +439,6 @@ body{
     z-index: 10;
 }
 
-/* ================================
-   TABLET / SMALL LAPTOP
-   Max-width: 950px
-================================ */
-
 @media (max-width: 950px) {
 
     .input-field {
@@ -521,74 +516,45 @@ body{
     }
 }
 
-/* ================================
-   MOBILE
-   Max-width: 650px
-================================ */
-
 @media (max-width: 650px) {
-
     html,
     body {
         width: 100%;
         min-height: 100%;
         overflow-x: hidden;
     }
-
     body {
         overflow-y: auto;
     }
-
-    /* =========================
-       HEADER
-    ========================= */
-
     .header {
         width: 100%;
         height: 55px;
     }
-
     .header nav {
         width: 100%;
         padding: 0 15px;
         box-sizing: border-box;
     }
-
     .menu {
         width: 25px;
         margin-right: 12px;
     }
-
     .bar {
         width: 25px;
         height: 3px;
     }
-
     .header h1 {
         position: static;
         margin-left: auto;
         font-size: 22px;
     }
-
-
-    /* =========================
-       SIDE NAV
-    ========================= */
-
     .side-nav {
         width: 260px;
         left: -260px;
     }
-
     .side-nav.open {
         left: 0;
     }
-
-
-    /* =========================
-       FORM
-    ========================= */
-
     .input-field {
         width: calc(100% - 24px);
         margin: 12px auto;
@@ -596,248 +562,141 @@ body{
         border-radius: 12px;
         box-sizing: border-box;
     }
-
     .input,
     .category {
         width: 100%;
         height: 48px;
         margin-bottom: 8px;
         box-sizing: border-box;
-
         border-radius: 8px !important;
     }
-
     .add-btn {
         width: 100%;
         margin-top: 5px;
     }
-
     .add-btn .btn {
         width: 100%;
         height: 46px;
         font-size: 16px;
     }
-
-
-    /* =========================
-       FILTER
-    ========================= */
-
     .filter-section {
         width: calc(100% - 24px);
         height: auto;
-
         margin: 10px auto;
         padding: 12px;
-
         display: flex;
         flex-direction: column;
         gap: 8px;
-
         box-sizing: border-box;
     }
-
     .ftr-exp,
     .srt-exp,
     .srh-exp {
         width: 100%;
         height: 45px;
-
         box-sizing: border-box;
         margin: 0;
     }
-
-
-    /* =========================
-       SUMMARY
-    ========================= */
-
     .exp-summary {
         width: calc(100% - 24px);
-
         display: flex;
         flex-direction: column;
-
         margin: 10px auto;
         gap: 0;
     }
-
     .total-expenses,
     .total-expense {
         width: 100%;
         height: 60px;
-
         flex: none;
-
         margin: 5px 0;
-
         box-sizing: border-box;
-
         font-size: 16px;
     }
-
-
-    /* =========================
-       EXPENSE CONTAINER
-    ========================= */
-
     .exp-list {
         width: calc(100% - 24px);
-
         margin: 10px auto;
-
         border-radius: 10px;
-
         box-sizing: border-box;
     }
-
     .expense-items {
         width: 100%;
-
         max-width: none;
         max-height: 400px;
-
         margin: 0;
         padding: 0 10px 10px;
-
         box-sizing: border-box;
-
         overflow-y: auto;
         overflow-x: hidden;
     }
-
-
-    /* =========================
-       YOUR EXPENSES
-    ========================= */
-
     .exp-label {
         width: 100%;
         height: 50px;
-
         display: flex;
         align-items: center;
-
         padding: 0 5px;
-
         font-size: 18px;
-
         background-color: white;
-
         position: sticky;
         top: 0;
-
         z-index: 10;
     }
-
-
-    /* =========================
-       EXPENSE CARD
-    ========================= */
-
     .list {
         width: 100%;
         min-height: 0;
-
         margin: 8px 0;
         padding: 12px;
-
         box-sizing: border-box;
-
         display: grid;
-
-        /*
-            Name
-            Amount
-            Category
-            Date
-            Edit
-            Delete
-        */
-
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
-
         gap: 10px;
-
         border-radius: 10px;
     }
-
-
-    /* Expense name */
-
     .list span:nth-child(1) {
         grid-column: 1 / 3;
-
         font-size: 17px;
-
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-
-
-    /* Amount */
-
     .list span:nth-child(2) {
         font-size: 15px;
-
         display: flex;
         align-items: center;
     }
-
-
-    /* Category */
-
     .list span:nth-child(3) {
         padding: 5px 10px;
-
         font-size: 13px;
-
         text-align: center;
-
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
-
-    /* Date */
-
     .list span:nth-child(4) {
         max-width: 100%;
         width: 100%;
         font-size: 13px;
     }
-
     .input-field input[type="date"] {
         min-width: 0;
         max-width: 100%;
         width: 100%;
         box-sizing: border-box;
     }
-
-
-    /* Buttons */
-
     .edit-btn,
     .delete-btn {
         width: 100%;
         height: 38px;
-
         padding: 0 8px;
-
         font-size: 13px;
-
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
     .edit-icon,
     .delete-icon {
         width: 14px;
         height: 14px;
-
         margin-right: 4px;
     }
 }
