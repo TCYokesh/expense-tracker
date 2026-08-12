@@ -719,7 +719,7 @@ body{
     }
 }
 
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
     .input-field,
     .filter-section,
     .exp-summary,
@@ -852,4 +852,4 @@ body{
         height: 52px;
         font-size: 18px;
     }
-} */
+}
