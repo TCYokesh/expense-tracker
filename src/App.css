@@ -439,257 +439,198 @@ body{
     z-index: 10;
 }
 
-/* =========================================
-   TABLET / SMALL DESKTOP
-   MAX WIDTH: 950px
-   ========================================= */
+@media (max-width: 650px) {
 
-@media (max-width: 950px) {
-
-    .expense-items {
-        width: 92%;
-
-        height: 320px;
-        max-height: 320px;
-
-        margin: 8px auto 0;
-        padding: 0;
-
-        box-sizing: border-box;
-
-        overflow-y: auto;
-        overflow-x: hidden;
-
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        flex-shrink: 0;
+    .header {
+        height: 55px;
     }
 
-    .expense-items::-webkit-scrollbar {
-        width: 6px;
+    .header nav {
+        padding: 0 15px;
     }
 
-    .expense-items::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
+    .menu {
+        width: 28px;
+        margin-right: 10px;
     }
 
-    .expense-items::-webkit-scrollbar-thumb {
-        background: #c9c7df;
-        border-radius: 10px;
+    .bar {
+        width: 25px;
+        height: 3px;
+        margin: 4px 0;
     }
 
-    .expense-items::-webkit-scrollbar-thumb:hover {
-        background: #aaa6ce;
-    }
-
-    /* =========================
-       MAIN SECTIONS
-       ========================= */
-
-    .input-field,
-    .filter-section,
-    .exp-summary,
-    .exp-list {
-        width: 92%;
+    .header h1 {
+        right: 15px;
+        font-size: 22px;
     }
 
 
-    /* =========================
-       INPUT SECTION
-       ========================= */
+    /* SIDE NAV */
+
+    .side-nav {
+        width: 250px;
+        left: -250px;
+    }
+
+    .nav-links {
+        margin-top: 70px;
+    }
+
+    .nav-links a {
+        padding: 16px 20px;
+    }
+
+
+    /* ERROR */
+
+    .form-error {
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    /* INPUT */
 
     .input-field {
-        padding: 20px;
+        width: 92%;
+        margin: 15px auto 0;
+        padding: 16px;
         box-sizing: border-box;
-    }
-
-    .input-field form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+        border-radius: 12px;
     }
 
     .input,
     .category {
+        width: 100%;
+        height: 45px;
         box-sizing: border-box;
-        height: 48px;
+        font-size: 14px;
+        border-radius: 8px !important;
     }
 
-    /* Expense name */
     .input-field .input:first-child {
         width: 100%;
-        border-radius: 8px;
     }
 
-    /* Date */
     .input-field input[type="date"] {
-        width: calc(50% - 5px);
-        border-radius: 8px;
+        width: 100%;
     }
 
-    /* Category */
     .input-field .category {
-        width: calc(50% - 5px);
-        border-radius: 8px;
+        width: 100%;
     }
 
 
-    /* =========================
-       ADD BUTTON
-       ========================= */
+    /* ADD BUTTON */
 
     .add-btn {
         width: 100%;
-        margin-top: 2px;
+        margin-top: 7px;
     }
 
     .add-btn .btn {
-        height: 46px;
+        width: 100%;
+        height: 45px;
         font-size: 16px;
+        border-radius: 8px;
     }
 
 
-    /* =========================
-       FILTER SECTION
-       ========================= */
+    /* FILTER */
 
     .filter-section {
-        gap: 10px;
-        padding: 0 10px;
+        width: 92%;
+        height: auto;
+        margin: 10px auto;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
         box-sizing: border-box;
     }
 
     .ftr-exp,
-    .srt-exp,
+    .srt-exp {
+        width: calc(50% - 4px);
+        height: 42px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
     .srh-exp {
-        max-width: 30%;
+        width: 100%;
+        height: 42px;
+        box-sizing: border-box;
+        font-size: 13px;
     }
 
 
-    /* =========================
-       EXPENSE LIST
-       ========================= */
+    /* SUMMARY */
 
-    .list {
-        grid-template-columns:
-            1fr
-            115px
-            120px
-            135px
-            auto
-            auto;
-
-        column-gap: 8px;
-
-        margin: 8px 0;
-        padding: 9px 10px;
-
-        border-radius: 8px;
+    .exp-summary {
+        width: 92%;
+        margin: 8px auto;
+        gap: 8px;
     }
 
-    .list span:nth-child(1) {
-        font-size: 16px;
-    }
-
-    .list span:nth-child(2) {
+    .total-expenses,
+    .total-expense {
+        width: auto;
+        height: 65px;
+        margin: 5px 0;
+        padding: 0 5px;
         font-size: 14px;
-    }
-
-    .list span:nth-child(3) {
-        padding: 6px 12px;
-        font-size: 13px;
-    }
-
-    .list span:nth-child(4) {
-        font-size: 13px;
+        border-radius: 9px;
+        box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
     }
 
 
-    /* =========================
-       EDIT BUTTON
-       ========================= */
+    /* EXPENSE LIST */
 
-    .edit-btn {
-        height: 38px;
-        padding: 0 13px;
-        font-size: 13px;
-        border-radius: 6px;
+    .exp-list {
+        width: 92%;
+        margin: 8px auto 0;
+        border-radius: 10px;
     }
 
 
-    /* =========================
-       DELETE BUTTON
-       ========================= */
-
-    .delete-btn {
-        height: 38px;
-        padding: 0 13px;
-        font-size: 13px;
-        border-radius: 6px;
-    }
-
-
-    /* =========================
-       BUTTON ICONS
-       ========================= */
-
-    .edit-icon,
-    .delete-icon {
-        width: 14px;
-        height: 14px;
-        margin-right: 5px;
-    }
-
-
-    /* =========================
-       EXPENSE LIST TITLE
-       ========================= */
+    /* LIST TITLE */
 
     .exp-label {
-        height: 55px;
-        font-size: 18px;
+        width: 100%;
+        height: 48px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        font-size: 17px;
     }
-}
 
 
-/* =========================================
-   MOBILE
-   MAX WIDTH: 650px
-   ========================================= */
-
-@media (max-width: 650px) {
+    /* SCROLLABLE LIST */
 
     .expense-items {
         width: 92%;
         height: 350px;
         max-height: 350px;
-
         margin: 8px auto 0;
         padding: 0;
-
         box-sizing: border-box;
-
         overflow-y: auto;
         overflow-x: hidden;
-
         display: flex;
         flex-direction: column;
-
-        /* Important */
         align-items: stretch;
         flex-shrink: 0;
     }
 
+
+    /* EXPENSE CARD */
+
     .list {
         width: 100%;
         min-height: 115px;
-
         margin: 7px 0;
         padding: 13px 12px;
-
         box-sizing: border-box;
 
         display: grid;
@@ -709,19 +650,23 @@ body{
 
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 
-        /* Very important */
         flex-shrink: 0;
     }
 
-    /* Expense name */
+
+    /* EXPENSE NAME */
+
     .list span:nth-child(1) {
         grid-column: 1 / 4;
         grid-row: 1;
+
+        width: 100%;
 
         text-align: center;
 
         font-size: 16px;
         font-weight: 700;
+
         color: #111936;
 
         overflow: hidden;
@@ -729,21 +674,28 @@ body{
         white-space: nowrap;
     }
 
-    /* Amount */
+
+    /* AMOUNT */
+
     .list span:nth-child(2) {
         grid-column: 1;
         grid-row: 2;
+
+        width: 100%;
 
         text-align: center;
 
         font-size: 12px;
         font-weight: 600;
+
         color: #222633;
 
         white-space: nowrap;
     }
 
-    /* Category */
+
+    /* CATEGORY */
+
     .list span:nth-child(3) {
         grid-column: 2;
         grid-row: 2;
@@ -751,6 +703,8 @@ body{
         justify-self: center;
 
         padding: 4px 10px;
+
+        max-width: 90%;
 
         border-radius: 14px;
 
@@ -764,26 +718,31 @@ body{
 
         white-space: nowrap;
 
-        max-width: 90%;
-
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    /* Date */
+
+    /* DATE */
+
     .list span:nth-child(4) {
         grid-column: 3;
         grid-row: 2;
 
+        width: 100%;
+
         text-align: center;
 
         font-size: 11px;
+
         color: #72798a;
 
         white-space: nowrap;
     }
 
-    /* Edit */
+
+    /* EDIT */
+
     .edit-btn {
         grid-column: 1;
         grid-row: 3;
@@ -805,10 +764,18 @@ body{
         font-weight: 600;
 
         cursor: pointer;
+
         white-space: nowrap;
     }
 
-    /* Delete */
+    .edit-btn:hover {
+        background-color: #f3f7ff;
+        border-color: #76a8ff;
+    }
+
+
+    /* DELETE */
+
     .delete-btn {
         grid-column: 3;
         grid-row: 3;
@@ -830,10 +797,18 @@ body{
         font-weight: 600;
 
         cursor: pointer;
+
         white-space: nowrap;
     }
 
-    /* Icons */
+    .delete-btn:hover {
+        background-color: #fff5f5;
+        border-color: #ff8585;
+    }
+
+
+    /* ICONS */
+
     .edit-icon,
     .delete-icon {
         width: 12px;
@@ -845,9 +820,11 @@ body{
         margin-right: 4px;
     }
 
-    /* Scrollbar */
+
+    /* SCROLLBAR */
+
     .expense-items::-webkit-scrollbar {
-        width: 6px;
+        width: 5px;
     }
 
     .expense-items::-webkit-scrollbar-track {
