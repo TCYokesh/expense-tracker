@@ -446,6 +446,45 @@ body{
 
 @media (max-width: 950px) {
 
+    .expense-items {
+        width: 92%;
+
+        height: 320px;
+        max-height: 320px;
+
+        margin: 8px auto 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex-shrink: 0;
+    }
+
+    .expense-items::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .expense-items::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb {
+        background: #c9c7df;
+        border-radius: 10px;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb:hover {
+        background: #aaa6ce;
+    }
+
     /* =========================
        MAIN SECTIONS
        ========================= */
@@ -623,6 +662,44 @@ body{
 
 @media (max-width: 650px) {
 
+    .expense-items {
+        width: 92%;
+
+        height: 350px;
+        max-height: 350px;
+
+        margin: 8px auto 0;
+        padding: 0;
+
+        box-sizing: border-box;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        flex-shrink: 0;
+    }
+
+    .expense-items::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .expense-items::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb {
+        background: #c9c7df;
+        border-radius: 10px;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb:hover {
+        background: #aaa6ce;
+    }
     /* =========================
        MAIN SECTIONS
        ========================= */
