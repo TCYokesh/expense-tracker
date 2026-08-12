@@ -490,19 +490,24 @@ body{
     .input,
     .category,
     .input-field input[type="date"] {
-        width: calc(25% - 9px);
-        min-width: 0;
-        height: 50px;
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: 46px;
+        margin: 0 0 9px 0;
         padding: 0 12px;
         box-sizing: border-box;
         font-size: 15px;
-    }
-    .category {
-        height: 50px;
+        border: 1px solid #cfd3df;
+        border-radius: 8px !important;
+        background-color: white;
     }
     .input-field input[type="date"] {
         padding: 0 10px;
         font-size: 14px;
+        -webkit-appearance: none;
+        appearance: none;
     }
     .add-btn {
         width: 100%;
