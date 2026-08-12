@@ -809,6 +809,13 @@ body{
         font-size: 13px;
     }
 
+    .input-field input[type="date"] {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
 
     /* Buttons */
 
