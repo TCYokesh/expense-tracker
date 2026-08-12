@@ -517,186 +517,133 @@ body{
 }
 
 @media (max-width: 650px) {
-    html,
-    body {
-        width: 100%;
-        min-height: 100%;
-        overflow-x: hidden;
-    }
-    body {
-        overflow-y: auto;
-    }
-    .header {
-        width: 100%;
-        height: 55px;
-    }
-    .header nav {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-    .menu {
-        width: 25px;
-        margin-right: 12px;
-    }
-    .bar {
-        width: 25px;
-        height: 3px;
-    }
-    .header h1 {
-        position: static;
-        margin-left: auto;
-        font-size: 22px;
-    }
-    .side-nav {
-        width: 260px;
-        left: -260px;
-    }
-    .side-nav.open {
-        left: 0;
-    }
-    .input-field {
-        width: calc(100% - 24px);
-        margin: 12px auto;
-        padding: 16px;
-        border-radius: 12px;
-        box-sizing: border-box;
-    }
-    .input,
-    .category {
-        width: 100%;
-        height: 48px;
-        margin-bottom: 8px;
-        box-sizing: border-box;
-        border-radius: 8px !important;
-    }
-    .add-btn {
-        width: 100%;
-        margin-top: 5px;
-    }
-    .add-btn .btn {
-        width: 100%;
-        height: 46px;
-        font-size: 16px;
-    }
-    .filter-section {
-        width: calc(100% - 24px);
-        height: auto;
-        margin: 10px auto;
-        padding: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        box-sizing: border-box;
-    }
-    .ftr-exp,
-    .srt-exp,
-    .srh-exp {
-        width: 100%;
-        height: 45px;
-        box-sizing: border-box;
-        margin: 0;
-    }
-    .exp-summary {
-        width: calc(100% - 24px);
-        display: flex;
-        flex-direction: column;
-        margin: 10px auto;
-        gap: 0;
-    }
-    .total-expenses,
-    .total-expense {
-        width: 100%;
-        height: 60px;
-        flex: none;
-        margin: 5px 0;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-    .exp-list {
-        width: calc(100% - 24px);
-        margin: 10px auto;
-        border-radius: 10px;
-        box-sizing: border-box;
-    }
-    .expense-items {
-        width: 100%;
-        max-width: none;
-        max-height: 400px;
-        margin: 0;
-        padding: 0 10px 10px;
-        box-sizing: border-box;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-    .exp-label {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        padding: 0 5px;
-        font-size: 18px;
-        background-color: white;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
+
     .list {
         width: 100%;
-        min-height: 0;
+        min-height: 180px;
         margin: 8px 0;
-        padding: 12px;
+        padding: 14px 12px;
         box-sizing: border-box;
+
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 10px;
+        grid-template-rows: 35px 15px 35px 35px 40px;
+
+        gap: 8px;
         border-radius: 10px;
+        overflow: hidden;
     }
+
+    /* NAME - centered */
     .list span:nth-child(1) {
         grid-column: 1 / 3;
+        grid-row: 1;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
         font-size: 17px;
+
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    /* AMOUNT - left */
     .list span:nth-child(2) {
-        font-size: 15px;
+        grid-column: 1;
+        grid-row: 3;
+
+        width: 100%;
+
         display: flex;
+        justify-content: flex-start;
         align-items: center;
+
+        text-align: left;
+        font-size: 15px;
     }
+
+    /* CATEGORY - right */
     .list span:nth-child(3) {
-        padding: 5px 10px;
+        grid-column: 2;
+        grid-row: 3;
+
+        width: 100%;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        text-align: right;
         font-size: 13px;
-        text-align: center;
+
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
     }
+
+    /* DATE - centered */
     .list span:nth-child(4) {
-        max-width: 100%;
+        grid-column: 1 / 3;
+        grid-row: 4;
+
         width: 100%;
-        font-size: 13px;
-    }
-    .input-field input[type="date"] {
-        min-width: 0;
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .edit-btn,
-    .delete-btn {
-        width: 100%;
-        height: 38px;
-        padding: 0 8px;
-        font-size: 13px;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
+        text-align: center;
+        font-size: 13px;
     }
+
+    /* EDIT */
+    .edit-btn {
+        grid-column: 1;
+        grid-row: 5;
+
+        width: 90%;
+        height: 40px;
+
+        justify-self: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    /* DELETE */
+    .delete-btn {
+        grid-column: 2;
+        grid-row: 5;
+
+        width: 90%;
+        height: 40px;
+
+        justify-self: center;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
     .edit-icon,
     .delete-icon {
         width: 14px;
         height: 14px;
         margin-right: 4px;
+        flex-shrink: 0;
     }
 }
