@@ -518,132 +518,368 @@ body{
 
 @media (max-width: 650px) {
 
-    .list {
+    /* =========================
+       PAGE
+       ========================= */
+
+    html,
+    body {
         width: 100%;
-        min-height: 180px;
-        margin: 8px 0;
-        padding: 14px 12px;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    .header {
+        width: 100%;
+        height: 55px;
+    }
+
+    .header nav {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        width: 25px;
+        margin-right: 12px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+    }
+
+    .header h1 {
+        position: static;
+        margin-left: auto;
+        font-size: 22px;
+    }
+
+
+    /* =========================
+       SIDE NAV
+       ========================= */
+
+    .side-nav {
+        width: 260px;
+        left: -260px;
+    }
+
+    .side-nav.open {
+        left: 0;
+    }
+
+
+    /* =========================
+       INPUT FORM BOX
+       ========================= */
+
+    .input-field {
+        width: calc(100% - 24px);
+        max-width: 500px;
+
+        margin: 12px auto;
+        padding: 14px;
+
+        box-sizing: border-box;
+        border-radius: 12px;
+
+        overflow: hidden;
+    }
+
+    /* All inputs/selects same size */
+    .input-field .input,
+    .input-field .category,
+    .input-field input,
+    .input-field select {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        height: 46px;
+
+        margin: 0 0 8px 0;
+        padding: 0 12px;
+
         box-sizing: border-box;
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 35px 15px 35px 35px 40px;
+        border-radius: 8px !important;
 
-        gap: 8px;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    /* NAME - centered */
-    .list span:nth-child(1) {
-        grid-column: 1 / 3;
-        grid-row: 1;
-
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        text-align: center;
-        font-size: 17px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    /* AMOUNT - left */
-    .list span:nth-child(2) {
-        grid-column: 1;
-        grid-row: 3;
-
-        width: 100%;
-
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        text-align: left;
         font-size: 15px;
     }
 
-    /* CATEGORY - right */
-    .list span:nth-child(3) {
-        grid-column: 2;
-        grid-row: 3;
+    /* Date input specifically */
+    .input-field input[type="date"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
 
+        height: 46px;
+
+        padding: 0 8px;
+
+        box-sizing: border-box;
+
+        font-size: 14px;
+
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Add button */
+    .add-btn {
         width: 100%;
-        max-width: 100%;
+        margin-top: 4px;
+    }
+
+    .add-btn .btn {
+        width: 100%;
+        height: 44px;
+
+        box-sizing: border-box;
+
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       FILTER BOX
+       ========================= */
+
+    .filter-section {
+        width: calc(100% - 24px);
+        height: auto;
+
+        margin: 10px auto;
+        padding: 10px;
 
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+    .ftr-exp,
+    .srt-exp,
+    .srh-exp {
+        width: 100%;
+        height: 44px;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       SUMMARY
+       ========================= */
+
+    .exp-summary {
+        width: calc(100% - 24px);
+
+        display: flex;
+        flex-direction: column;
+
+        margin: 10px auto;
+        gap: 0;
+    }
+
+    .total-expenses,
+    .total-expense {
+        width: 100%;
+        height: 55px;
+
+        flex: none;
+
+        margin: 5px 0;
+
+        box-sizing: border-box;
+
+        font-size: 15px;
+    }
+
+
+    /* =========================
+       EXPENSE LIST CONTAINER
+       ========================= */
+
+    .exp-list {
+        width: calc(100% - 24px);
+
+        margin: 10px auto;
+
+        border-radius: 10px;
+
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    .expense-items {
+        width: 100%;
+        max-width: none;
+
+        max-height: 400px;
+
+        margin: 0;
+        padding: 0 8px 8px;
+
+        box-sizing: border-box;
+
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .exp-label {
+        width: 100%;
+        height: 48px;
+
+        display: flex;
         align-items: center;
 
-        text-align: right;
-        font-size: 13px;
+        padding: 0 5px;
+
+        font-size: 17px;
+
+        background-color: white;
+
+        position: sticky;
+        top: 0;
+
+        z-index: 10;
+    }
+
+
+    /* =========================
+       MOBILE EXPENSE CARD
+       ========================= */
+
+    .list {
+        width: 100%;
+        min-height: 92px;
+
+        margin: 8px 0;
+        padding: 10px 8px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+
+        gap: 10px;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+    }
+
+
+    /* DETAILS:
+       Name | Amount | Date | Category
+    */
+
+    .expense-details {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        gap: 4px;
+
+        min-width: 0;
+    }
+
+    .expense-details span {
+        min-width: 0;
 
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+
+        font-size: 12px;
     }
 
-    /* DATE - centered */
-    .list span:nth-child(4) {
-        grid-column: 1 / 3;
-        grid-row: 4;
+    /* Name */
+    .expense-details span:nth-child(1) {
+        flex: 1.4;
+        text-align: left;
+    }
 
+    /* Amount */
+    .expense-details span:nth-child(2) {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Date */
+    .expense-details span:nth-child(3) {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Category */
+    .expense-details span:nth-child(4) {
+        flex: 1;
+        text-align: right;
+    }
+
+
+    /* =========================
+       EDIT + DELETE
+       ========================= */
+
+    .list-actions {
         width: 100%;
 
         display: flex;
+
         justify-content: center;
         align-items: center;
 
-        text-align: center;
-        font-size: 13px;
+        gap: 10px;
     }
 
-    /* EDIT */
-    .edit-btn {
-        grid-column: 1;
-        grid-row: 5;
-
-        width: 90%;
-        height: 40px;
-
-        justify-self: center;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        box-sizing: border-box;
-        font-size: 13px;
-    }
-
-    /* DELETE */
+    .edit-btn,
     .delete-btn {
-        grid-column: 2;
-        grid-row: 5;
+        width: 40%;
+        max-width: 120px;
 
-        width: 90%;
-        height: 40px;
+        height: 34px;
 
-        justify-self: center;
+        padding: 0 8px;
+
+        box-sizing: border-box;
 
         display: flex;
         justify-content: center;
         align-items: center;
 
-        box-sizing: border-box;
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .edit-icon,
     .delete-icon {
-        width: 14px;
-        height: 14px;
+        width: 13px;
+        height: 13px;
+
         margin-right: 4px;
+
         flex-shrink: 0;
     }
 }
