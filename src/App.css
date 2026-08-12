@@ -479,8 +479,8 @@ body{
         left: 0;
     }
     .input-field {
-        width: calc(100% - 24px);
-        max-width: none;
+        width: 1100px;
+        max-width: 100%;
         margin: 12px auto;
         padding: 14px;
         box-sizing: border-box;
@@ -488,33 +488,21 @@ body{
         overflow: hidden;
     }
     .input,
-    .category {
-        display: block;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        height: 46px;
-        margin: 0 0 9px 0;
+    .category,
+    .input-field input[type="date"] {
+        width: calc(25% - 9px);
+        min-width: 0;
+        height: 50px;
         padding: 0 12px;
         box-sizing: border-box;
         font-size: 15px;
-        border: 1px solid #cfd3df;
-        border-radius: 8px !important;
-        background-color: white;
+    }
+    .category {
+        height: 50px;
     }
     .input-field input[type="date"] {
-        display: block;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        height: 46px;
-        margin: 0 0 9px 0;
-        padding: 0 8px;
-        box-sizing: border-box;
+        padding: 0 10px;
         font-size: 14px;
-        border-radius: 8px !important;
-        -webkit-appearance: none;
-        appearance: none;
     }
     .add-btn {
         width: 100%;
@@ -723,5 +711,140 @@ body{
     .expense-items::-webkit-scrollbar-thumb {
         background: #c9c7df;
         border-radius: 10px;
+    }
+}
+
+@media (max-width: 950px) {
+    .input-field,
+    .filter-section,
+    .exp-summary,
+    .exp-list {
+        width: 92%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+    .input-field {
+        padding: 20px;
+    }
+    .input,
+    .category,
+    .input-field input[type="date"] {
+        width: calc(25% - 8px);
+        min-width: 0;
+        height: 50px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    .input-field input[type="date"] {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .category {
+        height: 50px;
+    }
+    .add-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+    .add-btn .btn {
+        width: 100%;
+        height: 46px;
+        font-size: 16px;
+    }
+    .filter-section {
+        height: 65px;
+        padding: 8px;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+    .ftr-exp,
+    .srt-exp,
+    .srh-exp {
+        width: calc((100% - 20px) / 3);
+        height: 44px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+        min-width: 0;
+    }
+    .exp-summary {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    }
+    .total-expenses,
+    .total-expense {
+        flex: 1 1 0;
+        width: 0;
+        height: 70px;
+        margin: 10px 6px;
+        box-sizing: border-box;
+        font-size: 17px;
+    }
+    .expense-items {
+        width: 96%;
+        max-width: none;
+        max-height: 300px;
+        margin: 10px auto;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .list {
+        width: 100%;
+        min-height: 55px;
+        margin: 7px 0;
+        padding: 8px 10px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 85px 140px 105px 80px 80px;
+        column-gap: 8px;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .list span:nth-child(1) {
+        min-width: 0;
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .list span:nth-child(2) {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .list span:nth-child(3) {
+        padding: 5px 8px;
+        font-size: 12px;
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .list span:nth-child(4) {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .edit-btn,
+    .delete-btn {
+        height: 38px;
+        padding: 0 12px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+    .edit-icon,
+    .delete-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+    .exp-label {
+        height: 52px;
+        font-size: 18px;
     }
 }
