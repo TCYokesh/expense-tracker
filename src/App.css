@@ -441,6 +441,10 @@ body{
 
 @media (max-width: 650px) {
 
+    /* =========================
+       HEADER
+       ========================= */
+
     .header {
         height: 55px;
     }
@@ -466,31 +470,9 @@ body{
     }
 
 
-    /* SIDE NAV */
-
-    .side-nav {
-        width: 250px;
-        left: -250px;
-    }
-
-    .nav-links {
-        margin-top: 70px;
-    }
-
-    .nav-links a {
-        padding: 16px 20px;
-    }
-
-
-    /* ERROR */
-
-    .form-error {
-        font-size: 14px;
-        text-align: center;
-    }
-
-
-    /* INPUT */
+    /* =========================
+       INPUT
+       ========================= */
 
     .input-field {
         width: 92%;
@@ -498,6 +480,12 @@ body{
         padding: 16px;
         box-sizing: border-box;
         border-radius: 12px;
+    }
+
+    .input-field form {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
     }
 
     .input,
@@ -509,20 +497,9 @@ body{
         border-radius: 8px !important;
     }
 
-    .input-field .input:first-child {
-        width: 100%;
-    }
-
     .input-field input[type="date"] {
         width: 100%;
     }
-
-    .input-field .category {
-        width: 100%;
-    }
-
-
-    /* ADD BUTTON */
 
     .add-btn {
         width: 100%;
@@ -537,16 +514,20 @@ body{
     }
 
 
-    /* FILTER */
+    /* =========================
+       FILTER
+       ========================= */
 
     .filter-section {
         width: 92%;
         height: auto;
         margin: 10px auto;
         padding: 10px;
+
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
+
         box-sizing: border-box;
     }
 
@@ -566,7 +547,9 @@ body{
     }
 
 
-    /* SUMMARY */
+    /* =========================
+       SUMMARY
+       ========================= */
 
     .exp-summary {
         width: 92%;
@@ -580,22 +563,26 @@ body{
         height: 65px;
         margin: 5px 0;
         padding: 0 5px;
+
         font-size: 14px;
+
         border-radius: 9px;
+
         box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
     }
 
 
-    /* EXPENSE LIST */
+    /* =========================
+       EXPENSE LIST
+       ========================= */
 
     .exp-list {
         width: 92%;
-        height: 430px;
-
         margin: 8px auto 0;
 
         display: flex;
         flex-direction: column;
+
         align-items: center;
 
         background-color: white;
@@ -604,12 +591,12 @@ body{
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
         box-sizing: border-box;
-
-        overflow: hidden;
     }
 
 
-    /* LIST TITLE */
+    /* =========================
+       LIST TITLE
+       ========================= */
 
     .exp-label {
         width: 100%;
@@ -621,53 +608,53 @@ body{
 
         box-sizing: border-box;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         font-size: 17px;
         font-weight: bolder;
 
         background-color: white;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
 
-    /* SCROLLABLE EXPENSE LIST */
+    /* =========================
+       SCROLL AREA
+       ========================= */
 
     .expense-items {
         width: 92%;
 
-        height: 360px;
-        max-height: 360px;
+        height: 300px;
+        max-height: 300px;
 
         margin: 5px auto 10px;
         padding: 0;
 
         box-sizing: border-box;
 
-        overflow-y: scroll;
+        overflow-y: auto;
         overflow-x: hidden;
 
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        flex-shrink: 0;
+        display: block;
     }
 
 
-    /* EXPENSE CARD */
+    /* =========================
+       EXPENSE CARD
+       ========================= */
 
     .list {
         width: 100%;
+
+        height: 115px;
         min-height: 115px;
 
         margin: 7px 0;
         padding: 13px 12px;
 
         box-sizing: border-box;
-
-        flex-shrink: 0;
 
         display: grid;
 
@@ -688,7 +675,9 @@ body{
     }
 
 
-    /* EXPENSE NAME */
+    /* =========================
+       EXPENSE NAME
+       ========================= */
 
     .list span:nth-child(1) {
         grid-column: 1 / 4;
@@ -709,7 +698,9 @@ body{
     }
 
 
-    /* AMOUNT */
+    /* =========================
+       AMOUNT
+       ========================= */
 
     .list span:nth-child(2) {
         grid-column: 1;
@@ -728,7 +719,9 @@ body{
     }
 
 
-    /* CATEGORY */
+    /* =========================
+       CATEGORY
+       ========================= */
 
     .list span:nth-child(3) {
         grid-column: 2;
@@ -757,7 +750,9 @@ body{
     }
 
 
-    /* DATE */
+    /* =========================
+       DATE
+       ========================= */
 
     .list span:nth-child(4) {
         grid-column: 3;
@@ -775,7 +770,9 @@ body{
     }
 
 
-    /* EDIT BUTTON */
+    /* =========================
+       EDIT
+       ========================= */
 
     .edit-btn {
         grid-column: 1;
@@ -802,13 +799,10 @@ body{
         white-space: nowrap;
     }
 
-    .edit-btn:hover {
-        background-color: #f3f7ff;
-        border-color: #76a8ff;
-    }
 
-
-    /* DELETE BUTTON */
+    /* =========================
+       DELETE
+       ========================= */
 
     .delete-btn {
         grid-column: 3;
@@ -835,13 +829,10 @@ body{
         white-space: nowrap;
     }
 
-    .delete-btn:hover {
-        background-color: #fff5f5;
-        border-color: #ff8585;
-    }
 
-
-    /* ICONS */
+    /* =========================
+       ICONS
+       ========================= */
 
     .edit-icon,
     .delete-icon {
@@ -855,7 +846,9 @@ body{
     }
 
 
-    /* SCROLLBAR */
+    /* =========================
+       SCROLLBAR
+       ========================= */
 
     .expense-items::-webkit-scrollbar {
         width: 6px;
