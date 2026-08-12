@@ -439,7 +439,16 @@ body{
     z-index: 10;
 }
 
+/* =========================================
+   TABLET / SMALL DESKTOP
+   MAX WIDTH: 950px
+   ========================================= */
+
 @media (max-width: 950px) {
+
+    /* =========================
+       MAIN SECTIONS
+       ========================= */
 
     .input-field,
     .filter-section,
@@ -448,86 +457,354 @@ body{
         width: 92%;
     }
 
+
+    /* =========================
+       INPUT SECTION
+       ========================= */
+
     .input-field {
-        padding: 22px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .input-field form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .input,
     .category {
-        width: 200px;
+        box-sizing: border-box;
+        height: 48px;
     }
 
+    /* Expense name */
+    .input-field .input:first-child {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    /* Date */
+    .input-field input[type="date"] {
+        width: calc(50% - 5px);
+        border-radius: 8px;
+    }
+
+    /* Category */
+    .input-field .category {
+        width: calc(50% - 5px);
+        border-radius: 8px;
+    }
+
+
+    /* =========================
+       ADD BUTTON
+       ========================= */
+
+    .add-btn {
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .add-btn .btn {
+        height: 46px;
+        font-size: 16px;
+    }
+
+
+    /* =========================
+       FILTER SECTION
+       ========================= */
+
     .filter-section {
-        gap: 12px;
+        gap: 10px;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     .ftr-exp,
     .srt-exp,
     .srh-exp {
-        width: 30%;
+        max-width: 30%;
     }
 
+
+    /* =========================
+       EXPENSE LIST
+       ========================= */
+
     .list {
-        grid-template-columns: 1fr 130px 130px 150px auto auto;
-        column-gap: 10px;
-        padding: 8px;
+        grid-template-columns:
+            1fr
+            115px
+            120px
+            135px
+            auto
+            auto;
+
+        column-gap: 8px;
+
+        margin: 8px 0;
+        padding: 9px 10px;
+
+        border-radius: 8px;
+    }
+
+    .list span:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .list span:nth-child(2) {
+        font-size: 14px;
     }
 
     .list span:nth-child(3) {
-        padding: 7px 15px;
+        padding: 6px 12px;
+        font-size: 13px;
     }
 
-    .edit-btn,
-    .delete-btn {
-        padding: 0 10px;
+    .list span:nth-child(4) {
+        font-size: 13px;
     }
+
+
+    /* =========================
+       EDIT BUTTON
+       ========================= */
+
+    .edit-btn {
+        height: 38px;
+        padding: 0 13px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+
+    /* =========================
+       DELETE BUTTON
+       ========================= */
+
+    .delete-btn {
+        height: 38px;
+        padding: 0 13px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+
+    /* =========================
+       BUTTON ICONS
+       ========================= */
 
     .edit-icon,
     .delete-icon {
         width: 14px;
         height: 14px;
+        margin-right: 5px;
     }
 
+
+    /* =========================
+       EXPENSE LIST TITLE
+       ========================= */
+
     .exp-label {
+        height: 55px;
         font-size: 18px;
     }
 }
 
+
+/* =========================================
+   MOBILE
+   MAX WIDTH: 650px
+   ========================================= */
+
 @media (max-width: 650px) {
+
+    /* =========================
+       MAIN SECTIONS
+       ========================= */
+
+    .input-field,
+    .filter-section,
+    .exp-summary,
+    .exp-list {
+        width: 92%;
+    }
+
+
+    /* =========================
+       INPUT SECTION
+       ========================= */
+
+    .input-field {
+        padding: 16px;
+        margin-top: 18px;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .input-field form {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .input,
+    .category {
+        width: 100%;
+        height: 46px;
+        box-sizing: border-box;
+        border-radius: 8px !important;
+        font-size: 14px;
+    }
+
+    .input-field .input:first-child {
+        width: 100%;
+    }
+
+    .input-field input[type="date"] {
+        width: 100%;
+    }
+
+    .input-field .category {
+        width: 100%;
+    }
+
+
+    /* =========================
+       ADD BUTTON
+       ========================= */
+
+    .add-btn {
+        width: 100%;
+        margin-top: 1px;
+    }
+
+    .add-btn .btn {
+        width: 100%;
+        height: 45px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+
+    /* =========================
+       FILTER SECTION
+       ========================= */
+
+    .filter-section {
+        width: 92%;
+        height: auto;
+        min-height: 70px;
+
+        padding: 10px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+    .ftr-exp,
+    .srt-exp {
+        width: calc(50% - 4px);
+        height: 42px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+    .srh-exp {
+        width: 100%;
+        height: 42px;
+        box-sizing: border-box;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       EXPENSE ITEMS CONTAINER
+       ========================= */
 
     .expense-items {
         width: 92%;
         max-height: 400px;
+
+        margin-top: 8px;
+
         overflow-y: auto;
         overflow-x: hidden;
     }
 
+
+    /* =========================
+       EXPENSE CARD
+       ========================= */
+
     .list {
         width: 100%;
         min-height: 0;
-        margin: 8px 0;
-        padding: 14px 12px;
+
+        margin: 7px 0;
+        padding: 13px 12px;
+
         box-sizing: border-box;
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto;
 
+        /*
+           Row 1:
+           Expense name
+
+           Row 2:
+           Amount | Category | Date
+
+           Row 3:
+           Edit | Delete
+        */
+
+        grid-template-columns:
+            1fr
+            1fr
+            1fr;
+
+        grid-template-rows:
+            auto
+            auto
+            auto;
+
+        column-gap: 8px;
         row-gap: 10px;
-        column-gap: 5px;
 
-        border: 1px solid #dfe2e9;
-        border-radius: 10px;
+        align-items: center;
+
+        border: 1px solid #e4e7ee;
+        border-radius: 9px;
+
         background-color: white;
+
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
 
+
+    /* =========================
+       LINE 1
+       EXPENSE NAME
+       ========================= */
+
     .list span:nth-child(1) {
-        grid-column: 1 / -1;
+        grid-column: 1 / 4;
         grid-row: 1;
 
         text-align: center;
-        font-size: 18px;
-        font-weight: bold;
+
+        font-size: 16px;
+        font-weight: 700;
+
         color: #111936;
 
         overflow: hidden;
@@ -535,107 +812,208 @@ body{
         white-space: nowrap;
     }
 
-.list span:nth-child(2),
-.list span:nth-child(3),
-.list span:nth-child(4) {
-    grid-row: 2;
-    min-width: 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Amount */
-.list span:nth-child(2) {
-    grid-column: 1;
-    font-size: 13px;
-    font-weight: bold;
-    color: #111111;
-}
+    /* =========================
+       LINE 2
+       AMOUNT
+       ========================= */
 
-.list span:nth-child(3) {
-    grid-column: 2;
-    padding: 4px 12px;
-    border-radius: 15px;
+    .list span:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
 
-    background-color: #eee8ff;
-    color: #6635d5;
+        width: 100%;
 
-    font-size: 11px;
-    font-weight: bold;
+        text-align: center;
 
-    white-space: nowrap;
-}
+        font-size: 12px;
+        font-weight: 600;
 
-.list span:nth-child(4) {
-    grid-column: 3 / 5;
-    font-size: 12px;
-    color: #697083;
-    white-space: nowrap;
-}
+        color: #222633;
 
-    .edit-btn {
-        grid-column: 1 / 3;
-        grid-row: 3;
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       LINE 2
+       CATEGORY
+       ========================= */
+
+    .list span:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
 
         justify-self: center;
 
-        height: 35px;
-        width: 90%;
-        padding: 0 8px;
+        padding: 4px 10px;
 
-        border: 1px solid #76a8ff;
+        border-radius: 14px;
+
+        background-color: #f0ebff;
+        color: #6542c5;
+
+        font-size: 11px;
+        font-weight: 600;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        max-width: 90%;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
+    /* =========================
+       LINE 2
+       DATE
+       ========================= */
+
+    .list span:nth-child(4) {
+        grid-column: 3;
+        grid-row: 2;
+
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 11px;
+
+        color: #72798a;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       LINE 3
+       EDIT BUTTON
+       ========================= */
+
+    .edit-btn {
+        grid-column: 1;
+        grid-row: 3;
+
+        justify-self: end;
+
+        width: 105px;
+        height: 36px;
+
+        padding: 0;
+
+        border: 1px solid #9bbcff;
         border-radius: 6px;
 
         background-color: white;
         color: #1761d1;
 
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 12px;
+        font-weight: 600;
 
         cursor: pointer;
+
         white-space: nowrap;
+
+        transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease;
     }
+
 
     .edit-btn:hover {
-        background-color: #eef5ff;
+        background-color: #f3f7ff;
+        border-color: #76a8ff;
     }
 
+
+    /* =========================
+       LINE 3
+       DELETE BUTTON
+       ========================= */
+
     .delete-btn {
-        grid-column: 3 / 5;
+        grid-column: 3;
         grid-row: 3;
 
-        justify-self: center;
+        justify-self: start;
 
-        height: 35px;
-        width: 90%;
-        padding: 0 8px;
+        width: 105px;
+        height: 36px;
 
-        border: 1px solid #ff8585;
+        padding: 0;
+
+        border: 1px solid #ffaaaa;
         border-radius: 6px;
 
         background-color: white;
         color: #ed2727;
 
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 12px;
+        font-weight: 600;
 
         cursor: pointer;
+
         white-space: nowrap;
+
+        transition:
+            background-color 0.2s ease,
+            border-color 0.2s ease;
     }
 
+
     .delete-btn:hover {
-        background-color: #fff0f0;
+        background-color: #fff5f5;
+        border-color: #ff8585;
     }
+
+
+    /* =========================
+       BUTTON ICONS
+       ========================= */
 
     .edit-icon,
     .delete-icon {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
+
         object-fit: contain;
         vertical-align: middle;
-        margin-right: 5px;
+
+        margin-right: 4px;
     }
 
+
+    /* =========================
+       EXPENSE LIST TITLE
+       ========================= */
+
+    .exp-label {
+        height: 50px;
+        font-size: 17px;
+    }
+
+
+    /* =========================
+       SCROLLBAR
+       ========================= */
+
+    .expense-items::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .expense-items::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb {
+        background: #c9c7df;
+        border-radius: 10px;
+    }
+
+    .expense-items::-webkit-scrollbar-thumb:hover {
+        background: #aaa6ce;
+    }
 }
