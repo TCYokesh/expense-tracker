@@ -440,286 +440,71 @@ body{
 }
 
 @media (max-width: 650px) {
-    html,
-    body {
-        width: 100%;
-        min-height: 100%;
-        overflow-x: hidden;
-    }
-    body {
-        overflow-y: auto;
-    }
-    .header {
-        width: 100%;
-        height: 55px;
-    }
-    .header nav {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-    .menu {
-        width: 25px;
-        margin-right: 12px;
-    }
-    .bar {
-        width: 25px;
-        height: 3px;
-    }
-    .header h1 {
-        position: static;
-        margin-left: auto;
-        font-size: 22px;
-    }
-    .side-nav {
-        width: 260px;
-        left: -260px;
-    }
-    .side-nav.open {
-        left: 0;
-    }
+
     .input-field {
         width: calc(100% - 24px);
         max-width: none;
+
         margin: 12px auto;
         padding: 14px;
+
         box-sizing: border-box;
         border-radius: 12px;
         overflow: hidden;
     }
+
     .input,
     .category,
     .input-field input[type="date"] {
         display: block;
+
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
+
         height: 46px;
+
         margin: 0 0 9px 0;
         padding: 0 12px;
+
         box-sizing: border-box;
+
         font-size: 15px;
+
         border: 1px solid #cfd3df;
         border-radius: 8px !important;
+
         background-color: white;
     }
+
     .input-field input[type="date"] {
         padding: 0 10px;
         font-size: 14px;
+
         -webkit-appearance: none;
         appearance: none;
     }
+
     .add-btn {
         width: 100%;
+
         display: flex;
         justify-content: center;
+
         margin-top: 3px;
     }
+
     .add-btn .btn {
         width: 100%;
         height: 46px;
+
         box-sizing: border-box;
+
         font-size: 16px;
         border-radius: 8px;
-    }
-    .filter-section {
-        width: calc(100% - 24px);
-        max-width: none;
-        height: auto;
-        margin: 10px auto;
-        padding: 8px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 6px;
-        overflow: hidden;
-    }
-    .ftr-exp,
-    .srt-exp,
-    .srh-exp {
-        width: calc((100% - 12px) / 3) !important;
-        max-width: none;
-        min-width: 0;
-        height: 42px;
-        margin: 0;
-        padding: 0 5px;
-        box-sizing: border-box;
-        font-size: 12px;
-        border-radius: 8px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .exp-summary {
-        width: calc(100% - 24px);
-        margin: 10px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        box-sizing: border-box;
-    }
-    .total-expenses,
-    .total-expense {
-        width: 100%;
-        height: 55px;
-        flex: none;
-        margin: 5px 0;
-        box-sizing: border-box;
-        font-size: 16px;
-    }
-    .exp-list {
-        width: calc(100% - 24px);
-        max-width: none;
-        margin: 10px auto 0;
-        box-sizing: border-box;
-        border-radius: 10px;
-        overflow: hidden;
-    }
-    .exp-label {
-        width: 100%;
-        height: 50px;
-        padding: 0 8px;
-        box-sizing: border-box;
-        font-size: 17px;
-    }
-    .expense-items {
-        width: calc(100% - 16px);
-        max-width: none;
-        max-height: 400px;
-        margin: 8px auto;
-        padding: 0;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-    .list {
-        width: 100%;
-        min-height: 120px;
-        margin: 7px 0;
-        padding: 12px 8px;
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        column-gap: 5px;
-        row-gap: 10px;
-        align-items: center;
-        border: 1px solid #dfe2e9;
-        border-radius: 9px;
-        background-color: white;
-        overflow: hidden;
-    }
-    .list span:nth-child(1) {
-        grid-column: 1 / 4;
-        grid-row: 1;
-        width: 100%;
-        min-width: 0;
-        text-align: center;
-        font-size: 16px;
-        font-weight: bold;
-        color: #111936;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .list span:nth-child(2) {
-        grid-column: 1;
-        grid-row: 2;
-        width: 100%;
-        min-width: 0;
-        text-align: center;
-        font-size: 12px;
-        font-weight: bold;
-        color: #111111;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .list span:nth-child(3) {
-        grid-column: 2;
-        grid-row: 2;
-        width: 100%;
-        min-width: 0;
-        padding: 5px 3px;
-        box-sizing: border-box;
-        border-radius: 14px;
-        background-color: #eee8ff;
-        color: #6635d5;
-        font-size: 11px;
-        font-weight: bold;
-        text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .list span:nth-child(4) {
-        grid-column: 3;
-        grid-row: 2;
-        width: 100%;
-        min-width: 0;
-        text-align: center;
-        color: #697083;
-        font-size: 11px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-    .edit-btn {
-        grid-column: 1;
-        grid-row: 3;
-        justify-self: end;
-        width: 105px;
-        height: 38px;
-        padding: 0 8px;
-        box-sizing: border-box;
-        border: 1px solid #76a8ff;
-        border-radius: 6px;
-        background-color: white;
-        color: #1761d1;
-        font-size: 13px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-    .delete-btn {
-        grid-column: 3;
-        grid-row: 3;
-        justify-self: start;
-        width: 105px;
-        height: 38px;
-        padding: 0 8px;
-        box-sizing: border-box;
-        border: 1px solid #ff8585;
-        border-radius: 6px;
-        background-color: white;
-        color: #ed2727;
-        font-size: 13px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-    .edit-icon,
-    .delete-icon {
-        width: 13px;
-        height: 13px;
-        margin-right: 5px;
-        object-fit: contain;
-        vertical-align: middle;
-        flex-shrink: 0;
-    }
-    .expense-items::-webkit-scrollbar {
-        width: 5px;
-    }
-    .expense-items::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    .expense-items::-webkit-scrollbar-thumb {
-        background: #c9c7df;
-        border-radius: 10px;
     }
 }
-
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
     .input-field,
     .filter-section,
     .exp-summary,
@@ -852,4 +637,4 @@ body{
         height: 52px;
         font-size: 18px;
     }
-} */
+}
