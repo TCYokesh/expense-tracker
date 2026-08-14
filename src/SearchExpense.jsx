@@ -1,8 +1,11 @@
 function SearchExpense(props){
     return(
-        <input className="srh-exp" type="text" value={props.search} placeholder='Search the Expense'
-            onChange={(e)=>props.setSearch(e.target.value)}
-        />
+        <div>
+            <label className="search-label">Search</label>
+            <input className="srh-exp" type="text" value={props.search} placeholder='Search the Expense'
+                onChange={(e)=>props.setSearch(e.target.value)}
+            />
+        </div>
     );
 }
 
