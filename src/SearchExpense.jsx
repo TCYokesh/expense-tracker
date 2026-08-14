@@ -2,7 +2,7 @@ function SearchExpense(props){
     return(
         <div>
             <label className="search-label">Search</label>
-            <input className="srh-exp" type="text" value={props.search} placeholder='Search the Expense'
+            <input className="srh-exp" type="text" value={props.search} placeholder='Search Expense'
                 onChange={(e)=>props.setSearch(e.target.value)}
             />
         </div>
